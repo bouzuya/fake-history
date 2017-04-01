@@ -9,7 +9,7 @@ export interface History {
   replaceState(data: any, title: string, url?: string | null): void;
 }
 
-export interface ExtendedHistory {
+export interface ExtendedHistory extends History {
   readonly current: string | null;
   readonly currentState: any | null;
   readonly next: string | null;
