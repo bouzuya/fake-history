@@ -60,6 +60,12 @@ export interface ExtendedHistory {
 export class FakeHistory implements ExtendedHistory { /* ... */ }
 ```
 
+## Related Project
+
+- [bouzuya/fake-history-fns][] ... fake-history functions
+
+[bouzuya/fake-history-fns]: https://github.com/bouzuya/fake-history-fns
+
 ## Development
 
 ```
