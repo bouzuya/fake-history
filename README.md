@@ -66,13 +66,6 @@ export class FakeHistory implements ExtendedHistory { /* ... */ }
 
 [bouzuya/fake-history-fns]: https://github.com/bouzuya/fake-history-fns
 
-## Development
-
-```
-$ yarn
-$ npm run watch
-```
-
 ## Badges
 
 [![Travis CI][travisci-badge-url]][travisci-url]
