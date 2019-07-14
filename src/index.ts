@@ -25,7 +25,7 @@ interface Item {
 }
 
 export class FakeHistory implements ExtendedHistory {
-  public scrollRestoration: 'auto' | 'manual';
+  public scrollRestoration: 'auto' | 'manual' = 'auto';
 
   private items: Item[];
   private index: number;

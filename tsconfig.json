@@ -1,6 +1,10 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
     "declaration": true,
+    "esModuleInterop": true,
+    "inlineSourceMap": true,
     "module": "commonjs",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
@@ -12,8 +16,7 @@
     "outDir": "./.tmp/es2015/",
     "removeComments": true,
     "rootDir": ".",
-    "sourceMap": true,
-    "strictNullChecks": true,
+    "strict": true,
     "target": "es2015"
   },
   "files": [

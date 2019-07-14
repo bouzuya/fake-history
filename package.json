@@ -29,7 +29,7 @@
     "power-assert": "1.4.2",
     "proxyquire": "1.7.11",
     "rimraf": "2.6.1",
-    "typescript": "2.2.2",
+    "typescript": "^3.5.3",
     "watch": "1.0.2"
   },
   "files": [
