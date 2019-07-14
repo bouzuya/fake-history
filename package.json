@@ -31,7 +31,6 @@
     "@types/power-assert": "1.4.29",
     "babel-preset-power-assert": "^3.0.0",
     "beater": "^6.0.1",
-    "cpx": "1.5.0",
     "npm-run-all": "4.0.2",
     "power-assert": "1.4.2",
     "proxyquire": "1.7.11",
