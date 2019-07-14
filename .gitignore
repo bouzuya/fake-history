@@ -1,6 +1,5 @@
-/*.d.ts
-/*.js
 /*.log
+/*.tgz
 /.tmp/
 /lib/
 /node_modules/
