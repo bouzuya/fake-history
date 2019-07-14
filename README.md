@@ -11,7 +11,7 @@ $ npm install fake-history
 ## Usage
 
 ```ts
-import * as assert from 'assert';
+import assert from 'assert';
 import { FakeHistory } from 'fake-history';
 
 const history = new FakeHistory();
