@@ -1,7 +1,7 @@
 export interface History {
   readonly length: number;
   readonly state: any;
-  scrollRestoration: 'auto' | 'manual';
+  scrollRestoration: "auto" | "manual";
   back(): void;
   forward(): void;
   go(delta?: number): void;
@@ -25,55 +25,55 @@ interface Item {
 }
 
 export class FakeHistory implements ExtendedHistory {
-  public scrollRestoration: 'auto' | 'manual' = 'auto';
+  public scrollRestoration: "auto" | "manual" = "auto";
 
   private items: Item[];
   private index: number;
 
-  constructor() {
+  public constructor() {
     this.items = [];
     this.index = -1;
   }
 
   // extended history
 
-  get current(): string | null {
+  public get current(): string | null {
     const item = this.currentItem();
     return item === null ? null : item.url;
   }
 
-  get currentState(): any | null {
+  public get currentState(): any | null {
     const item = this.currentItem();
     return item === null ? null : item.data;
   }
 
-  get next(): string | null {
+  public get next(): string | null {
     const item = this.nextItem();
     return item === null ? null : item.url;
   }
 
-  get nextState(): any | null {
+  public get nextState(): any | null {
     const item = this.nextItem();
     return item === null ? null : item.data;
   }
 
-  get previous(): string | null {
+  public get previous(): string | null {
     const item = this.previousItem();
     return item === null ? null : item.url;
   }
 
-  get previousState(): any | null {
+  public get previousState(): any | null {
     const item = this.previousItem();
     return item === null ? null : item.data;
   }
 
   // history
 
-  get length(): number {
+  public get length(): number {
     return this.items.length;
   }
 
-  get state(): any {
+  public get state(): any {
     const item = this.currentItem();
     return item === null ? null : item.data;
   }
@@ -91,7 +91,9 @@ export class FakeHistory implements ExtendedHistory {
   }
 
   public go(delta?: number): void {
-    if (typeof delta === 'undefined') { return; }
+    if (typeof delta === "undefined") {
+      return;
+    }
     if (this.items.length > 0) {
       const index = this.index + delta;
       if (index < 0 || this.items.length <= index) {
@@ -103,18 +105,20 @@ export class FakeHistory implements ExtendedHistory {
 
   public pushState(data: any, title: string, url?: string | null): void {
     // window.location.href & relative url are not supported.
-    const u = typeof url === 'undefined' || url === null ? null : url;
+    const u = typeof url === "undefined" || url === null ? null : url;
     this.index = this.index + 1;
-    this.items =
-      this.items.slice(0, this.index).concat([{ data, title, url: u }]);
+    this.items = this.items
+      .slice(0, this.index)
+      .concat([{ data, title, url: u }]);
   }
 
   public replaceState(data: any, title: string, url?: string | null): void {
     if (this.items.length === 0) return this.pushState(data, title, url);
     // window.location.href & relative url are not supported.
-    const u = typeof url === 'undefined' || url === null ? null : url;
-    this.items =
-      this.items.slice(0, this.index).concat([{ data, title, url: u }]);
+    const u = typeof url === "undefined" || url === null ? null : url;
+    this.items = this.items
+      .slice(0, this.index)
+      .concat([{ data, title, url: u }]);
   }
 
   // private

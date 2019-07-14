@@ -1,7 +1,6 @@
-import { Test } from 'beater';
-import { tests as historyTests } from './history';
+import { Test } from "beater";
+import { tests as historyTests } from "./history";
 
-const tests = ([] as Test[])
-  .concat(historyTests);
+const tests = ([] as Test[]).concat(historyTests);
 
 export { tests };
