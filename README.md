@@ -68,8 +68,11 @@ export class FakeHistory implements ExtendedHistory { /* ... */ }
 
 ## Badges
 
+[![npm version][npm-badge-url]][npm-url]
 [![Travis CI][travisci-badge-url]][travisci-url]
 
+[npm-badge-url]: https://img.shields.io/npm/v/fake-history.svg
+[npm-url]: https://www.npmjs.com/package/fake-history
 [travisci-badge-url]: https://travis-ci.org/bouzuya/fake-history.svg
 [travisci-url]: https://travis-ci.org/bouzuya/fake-history
 
