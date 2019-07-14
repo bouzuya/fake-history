@@ -1,7 +1,7 @@
 {
   "name": "fake-history",
   "description": "A History using JavaScript object",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "author": {
     "name": "bouzuya",
     "email": "m@bouzuya.net",
